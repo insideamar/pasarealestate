@@ -190,9 +190,8 @@ document.addEventListener('DOMContentLoaded', () => {
       { s: 'a[href="#quote"].btn', k: 'btnQuote' },
       
       // Hero
-      { s: '.tagline-nepali', k: 'heroTitle1' },
       { s: '.hero-subtitle', k: 'heroSubtitle' },
-      { s: '.hero-content .btn-gold', k: 'heroExplore' },
+      { s: '.hero-content .btn-outline', k: 'heroExplore' },
       
       // Stats
       { s: '.stats-section .stat-card:nth-child(1) .stat-label', k: 'stat1' },
@@ -306,14 +305,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Special cases
-    const heroTitle2 = document.querySelector('.hero-tagline');
-    if (heroTitle2) {
-      const innerSpan = heroTitle2.querySelector('.tagline-nepali');
-      heroTitle2.innerHTML = '';
-      if(innerSpan) heroTitle2.appendChild(innerSpan);
-      heroTitle2.appendChild(document.createTextNode(' ' + t['heroTitle2']));
-    }
-    
     const aboutTitle = document.querySelector('#about .section-title');
     if (aboutTitle) {
       aboutTitle.innerHTML = t['aboutTitle'].replace('\n', '<br/>');
